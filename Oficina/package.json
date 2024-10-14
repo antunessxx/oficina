@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongoose": "^8.7.1"
+  },
+  "name": "Oficina",
+  "version": "1.0.0",
+  "main": "/src/app.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node src/app.js"
+  },
+  "author": "kauany",
+  "license": "ISC",
+  "description": ""
+}
