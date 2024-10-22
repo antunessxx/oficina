@@ -5,7 +5,6 @@ import vehicleRouter from './router/vehicleRouter.js'
 import maintenanceRouter from './router/maintenanceRouter.js'
 
 
-connectDB();
 
 const app = express();
 
