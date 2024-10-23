@@ -1,8 +1,8 @@
-import Vehicle from '../models/Vehicle.js';
+import Vehicle from '../models/vehicleModel.js';
 
 export const store = async (req, res) =>{
     try{
-        const vehicle = await vehicle.create(req.body);
+        const vehicle = await Vehicle.create(req.body);
         return res.status(201).json(vehicle);
     }catch (error){
         return res.status(400).json({message: error.message});
@@ -11,7 +11,7 @@ export const store = async (req, res) =>{
 
 export const index = async (req, res) =>{
     try{
-        const vehicle = await vehicle.find().exec();
+        const vehicle = await Vehicle.find().exec();
         return res.status(201).json(vehicle);
     }catch (error){
         return res.status(400).json({message: error.message});
@@ -20,7 +20,7 @@ export const index = async (req, res) =>{
 
 export const update = async (req, res) =>{
     try{
-        const vehicle = await vehicle.findByIdAndUpdate((req.params.id, req.body).exec());
+        const vehicle = await Vehicle.findByIdAndUpdate((req.params.id, req.body).exec());
         return res.status(201).json(vehicle);
     }catch (error){
         return res.status(400).json({message: error.message});
@@ -29,7 +29,7 @@ export const update = async (req, res) =>{
 
 export const destroy = async (req, res) =>{
     try{
-        const vehicle = await vehicle.findByIdAndDelete((req.params.id).exec());
+        const vehicle = await Vehicle.findByIdAndDelete((req.params.id).exec());
         return res.status(201).json(vehicle);
     }catch (error){
         return res.status(400).json({message: error.message});

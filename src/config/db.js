@@ -4,7 +4,7 @@ const connectDB = async () => {
     mongoose
         .connect (`${process.env.URI}`) 
         .then(() => console.log('Connected to MongoDB')) 
-        .catch((erro) => console.error("Erro ao conectar ao mongo:",error)); 
+        .catch((erro) => console.error("Erro ao conectar ao mongo:",erro)); 
 };
 
-export default mongoose;
+export default connectDB;

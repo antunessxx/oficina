@@ -4,7 +4,7 @@ import workshopRouter from './router/workshopRouter.js'
 import vehicleRouter from './router/vehicleRouter.js'
 import maintenanceRouter from './router/maintenanceRouter.js'
 
-
+connectDB()
 
 const app = express();
 
@@ -14,4 +14,4 @@ app.use('/workshop',workshopRouter);
 app.use('/vehicle',vehicleRouter );
 app.use('/maintenance',maintenanceRouter )
 
-app.listen(3000,() => console.log('Servidor rodando na porta 3000'));
+app.listen(process.env.PORT,() => console.log('Servidor rodando na porta 3000'));

@@ -10,7 +10,7 @@ const vehicleSchema = new Schema ({
         required: true
         },
         year:{
-            type:[Number],
+            type:Number,
             required:true
         },
         owner:{
@@ -19,7 +19,8 @@ const vehicleSchema = new Schema ({
         },
         maintenances:{
             type: [Schema.Types.ObjectId],
-            ref:'Maintenance'
+            ref:'Maintenance',
+            required:true
         }
 });
 

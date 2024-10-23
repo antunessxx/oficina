@@ -9,12 +9,11 @@ const workshopSchema = new Schema ({
         type:String,
         required: true
         },
-        specialties:[
-          {
-            type: String,
+        specialties:{ 
+            type: [String],
             required:true
           }
-        ]
+        
 });
 
 export default model('workshop', workshopSchema);
